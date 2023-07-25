@@ -48,6 +48,13 @@ lista.sort();
 console.log(lista)
 
 console.log("=======")
+
+
+var n1 = 3;
+var n2 = 4;
+var contl = n1*3;
+var op = (n1 ** n2) + n1 * n2 /2 * 22  - (n1 * 2 / 0,5);
+console.log(op)
 //Caso voce queira arredondar um float voce pofe usar uma funçao chamada Math.round()
 //Existe tambem a funçao toFixed() que arredonda o numero para cima 
 //outra coisa tambem  é  a função chamada toLocaleString() que converte o numero para uma sring,ja trtando a questao do arrendondamento e convertendo para a moeda do país que queremos

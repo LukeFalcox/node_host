@@ -52,6 +52,12 @@
 // function displayConsole(output) {
 //   console.log(output)
 // }
+
+
+
+
+
+
 /*
 Função: trecho de codigo que só é executado quando é chamado
 
@@ -110,10 +116,14 @@ console.log(carro2)
 //Arrow Function = è um afunção simplificada
 
 const multi = (n1,n2) => {
-  const mult = n1 + n2
+  const soma = n1 + n2
   return mult
 }
 
 const multiplicação = multi(2,9)
 
-console.log(multipliicação)
+console.log(multiplicação)
+
+//existe tambem uma coisa chamada funções sincronas e assincronas 
+//Assincronas: sao aquelas que buscam alguma informação ou nao é executado imediatamente
+//Sincronas: ao executar um código, o resultado é retornado assim que o navegador puder

@@ -30,7 +30,7 @@ const Sidebar = ({ active }) => {
       <Link to='/NovoProjeto'>
         <SidebarItem Icon={FaChartBar} Text="Tranferencia" />
       </Link>
-      <Link to='/Project'>
+      <Link to='/Projects'>
         <SidebarItem Icon={FaChartBar} Text="Extrato" />
       </Link>
         <Link to='/Empresa'>

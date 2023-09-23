@@ -2,9 +2,9 @@ import {useEffect, useState} from 'react'
 
 import styles from './Project.module.css'
 
-import Input from '../form/input'
-import Select from '../form/Select'
-import SubmitButton from '../form/SubmitButton'
+import Input from '../formulario/form/input'
+import Select from '../formulario/form/Select'
+import SubmitButton from '../formulario/form/SubmitButton'
 
 function ProjectForm({handleSubmit,btnText,projectData}) {
 

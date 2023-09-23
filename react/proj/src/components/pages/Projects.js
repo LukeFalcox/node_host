@@ -1,4 +1,4 @@
-import Message from "../layouts/Message"
+import Message from "../formulario/layouts/Message"
 
 import{useLocation} from 'react-router-dom'
 

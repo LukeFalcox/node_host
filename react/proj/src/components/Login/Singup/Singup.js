@@ -4,6 +4,7 @@ import Button from "../Button/index";
 import * as C from "./styles";
 import { Link, useNavigate } from "react-router-dom";
 import useAuth from "../hooks/userAuth";
+import axios from "axios";
 
 const Signup = () => {
   const [email, setEmail] = useState("");
@@ -11,27 +12,44 @@ const Signup = () => {
   const [senha, setSenha] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
+  var resultado = useState('');
 
   const { signup } = useAuth();
 
-  const handleSignup = () => {
+  const handleSignup = async (e) => {
+
+    e.preventDefault();
     if (!email | !emailConf | !senha) {
       setError("Preencha todos os campos");
       return;
-    } else if (email !== emailConf) {
+    } 
+    
+    else if (email !== emailConf) {
       setError("Os e-mails não são iguais");
       return;
     }
 
-    const res = signup(email, senha);
 
-    if (res) {
-      setError(res);
-      return;
+    try {
+      const response = await axios.post('http://localhost:3001/Signup', { email: email.toString(), senha: senha.toString() });
+      resultado = response.data;
+
+    } catch (error) {
+      console.error('Erro ao enviar a solicitação:', error);
     }
 
-    alert("Usuário cadatrado com sucesso!");
-    navigate("/");
+    if (resultado != "Conta Cadastrada") {
+      setError(resultado);
+      return;
+    }
+    else{
+      alert("Usuário cadatrado com sucesso!");
+      navigate("/Inicio");
+    }
+
+ 
+    
+    
   };
 
   return (
@@ -42,19 +60,19 @@ const Signup = () => {
           type="email"
           placeholder="Digite seu E-mail"
           value={email}
-          onChange={(e) => [setEmail(e.target.value), setError("")]}
+          onChange={(e) => [setEmail(e.target.value), setError("")]} required
         />
         <Input
           type="email"
           placeholder="Confirme seu E-mail"
           value={emailConf}
-          onChange={(e) => [setEmailConf(e.target.value), setError("")]}
+          onChange={(e) => [setEmailConf(e.target.value), setError("")]} required
         />
         <Input
           type="password"
           placeholder="Digite sua Senha"
           value={senha}
-          onChange={(e) => [setSenha(e.target.value), setError("")]}
+          onChange={(e) => [setSenha(e.target.value), setError("")]} required
         />
         <C.labelError>{error}</C.labelError>
         <Button Text="Inscrever-se" onClick={handleSignup} />

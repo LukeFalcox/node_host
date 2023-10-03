@@ -1,0 +1,10 @@
+.py {
+    padding-top: 20px;
+}
+
+/* Estilo para o contêiner dos cards dentro da seção "Contas" */
+.row {
+    display: flex;
+    justify-content: space-between; /* ou outro valor de alinhamento desejado */
+    flex-wrap: wrap; /* Garante que os cards se ajustem automaticamente à linha seguinte se não houver espaço suficiente */
+}

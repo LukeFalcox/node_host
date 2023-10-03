@@ -3,8 +3,8 @@ import {BrowserRouter, Routes, Route,Link} from 'react-router-dom'
 import Home from './components/pages/Home'
 import Contact from './components/pages/Contact'
 import Empresa from './components/pages/Empresa'
-import NovoProjeto from './components/pages/NovoProjeto'
-import Projects from './components/pages/Projects'
+import Transferencia from './components/pages/Transferencia'
+import Contas from './components/pages/Contas'
 
 import Container  from './components/formulario/layouts/Container'
 import NavBar from './components/formulario/layouts/Navbar'
@@ -33,13 +33,13 @@ function App() {
       </Route>
       <Route path='/Empresa' element={<Empresa/>}>
       </Route>
+      <Route path='/Transferencia' element={<Transferencia/>}>
+      </Route>
+      <Route path='/Contas' element={<Contas/>}>
+      </Route>
       <Route path='/Contact'element={<Contact/>}>
       </Route>
-      <Route path='/NovoProjeto' element={<NovoProjeto/>}>
-    </Route> 
-      <Route path='/Projects' element={<Projects/>}>
-    </Route> 
-    <Route path="/" element={<Private Item={<Home/>}/>}>
+    <Route path="/Home" element={<Private Item={<Home/>}/>}>
     </Route> 
     <Route path="/Sign.js" element={<Sign/>}> 
     </Route> 

@@ -1,0 +1,62 @@
+/* Estilo básico para o input */
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 70vh;
+    width: 100vw;
+  }
+  input[type="text"],
+  input[type="password"],
+  input[type="number"] {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+
+form{
+    gap: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    box-shadow:0 1px 2px #0003;
+    background-color: white;
+    max-width: 550px;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  /* Estilo quando o input está em foco (selecionado) */
+  input[type="text"]:focus,
+  input[type="password"]:focus,
+  input[type="number"]:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+
+  button {
+    background-color: #007bff; /* Cor de fundo */
+    color: #fff; /* Cor do texto */
+    padding: 10px 20px; /* Espaçamento interno (cima/baixo e esquerda/direita) */
+    border: none; /* Remova a borda */
+    border-radius: 5px; /* Borda arredondada */
+    font-size: 16px; /* Tamanho da fonte */
+    cursor: pointer; /* Altera o cursor para uma mãozinha ao passar o mouse */
+  }
+  
+  /* Estilo quando o botão está em foco (selecionado) */
+  button:focus {
+    outline: none; /* Remova a borda de foco padrão */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Adicione uma sombra suave */
+  }
+  
+  /* Estilo quando o botão é hover (mouse sobre o botão) */
+  button:hover {
+    background-color: #0056b3; /* Altere a cor de fundo quando o mouse passar por cima */
+  }

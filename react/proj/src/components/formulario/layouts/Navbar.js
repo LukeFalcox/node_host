@@ -1,5 +1,5 @@
 import {Link} from 'react-router-dom'
-import Header from "../../Side/Header/index";
+import Header from "../../Side/Header/Header";
 import Container from './Container'
 
 import style from './styles/Navbar.module.css'
